@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+  font-style: initial;
+  font-size: x-large;
+  font-weight: bold;
+}
+h2 {
+  font-style: italic;
+  font-size: large;
+}
+form {
+  position: relative;
+  left: 50px;
+  top: 20px;
+}

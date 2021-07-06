@@ -1,0 +1,130 @@
+<h1 style="text-align: center">Patient Registration</h1>
+
+<h2 style="text-align: center">Please fill in the details of the patient.</h2>
+
+<form>
+  <label for="name">Name: </label>
+  <input required id="name" type="text" [formControl]="name" />
+  <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+    name field is required
+  </div>
+  <br />
+
+  <label for="gender">Gender </label>
+  <input
+    required
+    type="radio"
+    [formControl]="gender"
+    value="male"
+    id="gender"
+    name="gender"
+  />
+  <div class="alert alert-danger" *ngIf="gender.touched && !gender.valid"></div>
+  Male
+  <input
+    required
+    type="radio"
+    [formControl]="gender"
+    value="female"
+    id="gender"
+    name="gender"
+  />
+  Female
+  <div class="alert alert-danger" *ngIf="gender.touched && !gender.valid">
+    gender field is required
+  </div>
+  <br />
+
+  <label for="age">Age </label>
+  <input required type="number" [formControl]="age" id="age" name="age" />
+  <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
+    age field is required>
+  </div>
+  <br />
+
+  <label for="infection">Date of Infection </label>
+  <input
+    required
+    type="date"
+    [formControl]="infection"
+    id="infection"
+    name="infection"
+  />
+  <div class="alert alert-danger" *ngIf="infection.touched && !infection.valid">
+    Date of infection required>
+  </div>
+
+  <br />
+  <label for="infection_days">Days since Infection</label>
+  <input
+    required
+    type="number"
+    [formControl]="infection_days"
+    id="infection_days"
+    name="infection_days"
+  />
+  <div
+    class="alert alert-danger"
+    *ngIf="infection_days.touched && !infection_days.valid"
+  ></div>
+  <br />
+
+  <label for="status">Status </label>
+  <input
+    required
+    type="radio"
+    [formControl]="status"
+    value="infected"
+    id="status"
+    name="status"
+  />
+  <div class="alert alert-danger" *ngIf="status.touched && !status.valid"></div>
+  Infected
+  <input
+    required
+    type="radio"
+    [formControl]="status"
+    value="recovered"
+    id="status"
+    name="status"
+  />
+  Recovered
+  <div class="alert alert-danger" *ngIf="status.touched && !status.valid">
+    gender field is required
+  </div>
+  <br />
+
+  <label for="age">Age </label>
+  <input required type="number" [formControl]="age" id="age" name="age" />
+  <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
+    age field is required>
+  </div>
+  <br />
+
+  <label for="cid">CID </label>
+  <input
+    required
+    minlength="11"
+    type="number"
+    [formControl]="cid"
+    id="cid"
+    name="cid"
+  />
+  <div class="alert alert-danger" *ngIf="cid.touched && !cid.valid">
+    CID is required
+  </div>
+  <br />
+
+  <label for="recovery">Date of Recovery </label>
+  <input type="date" id="recovery" name="recovery" />
+
+  <br />
+
+  <label for="location">Location of Infection </label>
+  <input type="text" id="location" name="location" />
+  <br />
+
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+</form>
